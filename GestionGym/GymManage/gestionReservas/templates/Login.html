@@ -1,0 +1,38 @@
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+
+<html>
+
+<head>
+
+    <title>Login</title>
+
+</head>
+ 
+
+<body>
+    <div class="card" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">Bienvenido(a)</h5><div class="spinner-border text-primary" role="status">  <span class="visually-hidden">Loading...</span>
+          </div>
+          
+          <h6 class="card-subtitle mb-2 text-body-secondary">Debes Iniciar Sesión para poder acceder al sistema.
+            Por favor ingresa tu Usuario y Clave.
+          </h6>
+        </div>
+      </div>
+    <form action="/log/" method="POST">
+        {% csrf_token %}
+
+        <table>
+            {{form.as_table}}
+        </table>
+
+        <input type="submit" value="Enviar">
+
+    </form>
+
+</body>
+
+
+</html>
